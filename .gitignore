@@ -39,3 +39,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+/docs
+
+# local agent and IDE state
+/.agents/
+/.codex/
+.claude/
+.vscode/
