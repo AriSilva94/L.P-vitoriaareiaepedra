@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { HeroSlideshow } from "./components/hero-slideshow";
 import { SiteFooter } from "./components/site-footer";
 import { SiteHeader } from "./components/site-header";
@@ -118,7 +119,7 @@ export default function Home() {
                 className="flex flex-col border border-transparent py-4 text-center"
                 key={post.href}
               >
-                <a
+                <Link
                   className="relative mb-5 block aspect-[5/4] overflow-hidden rounded-2xl max-[768px]:aspect-[2/1]"
                   href={post.href}
                   aria-label={`Ler ${post.title}`}
@@ -130,21 +131,21 @@ export default function Home() {
                     className="object-cover"
                     sizes="(max-width: 767px) 90vw, (max-width: 1024px) 33vw, 22vw"
                   />
-                </a>
+                </Link>
                 <div className="flex flex-1 flex-col items-center">
                   <h3 className="w-full text-lg leading-[1.3] font-bold text-brand-blue">
-                    <a href={post.href}>{post.title}</a>
+                    <Link href={post.href}>{post.title}</Link>
                   </h3>
                   <p className="mb-[23px] line-clamp-4 w-full text-sm leading-[21px] font-normal text-[#777]">
                     {post.excerpt}
                   </p>
-                  <a
+                  <Link
                     className="mt-auto inline-block rounded border border-brand-blue bg-brand-blue px-[1.2em] py-[.5em] text-[15px] leading-[1.65] font-bold tracking-[3.8px] text-white hover:bg-[#00174f]"
                     href={post.href}
                     aria-label={`Leia mais: ${post.title}`}
                   >
                     LEIA MAIS
-                  </a>
+                  </Link>
                 </div>
               </article>
             ))}
